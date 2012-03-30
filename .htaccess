@@ -1,0 +1,29 @@
+RewriteEngine On
+
+
+#personalizar errores de navegador
+ErrorDocument 404 http://localhost/mi_web
+ErrorDocument 403 http://localhost/mi_web
+
+
+#los archivos .aspx me los leerá como .php
+AddType application/x-httpd-php .cesarcancino
+
+
+
+
+#esto es con una variable
+
+#seo 3
+RewriteRule ^.*/([0-9]+)\/$ articulos.php?id_articulo=$1 [L]
+#seo 1
+#RewriteRule ^.*n([0-9]+)\.html$ entrada.php?id_noticia=$1 [L]
+
+
+#este es con 2 variables
+
+#seo 2
+#RewriteRule ^.*n([0-9]+)/*/c([a-z]+)\.html$ entrada.php?id_noticia=$1&id_categoria=$2 [L]
+#seo 4
+#RewriteRule ^.*i([0-9]+)/*-r([0-9]+)\/$ entrada.php?id_grabaciones=$1&id_relatores=$2 [L]
+

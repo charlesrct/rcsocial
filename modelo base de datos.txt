@@ -1,0 +1,17 @@
+Base de datos: mi_web
+
+Tablas:
+
+articulos			usuarios
+  id_articulo PRIMARY KEY 	  id_usuario PRIMARY KEY
+  titulo			  nombre
+  descripcion			  correo
+  fecha_publicacion		  login
+  id_categoria			  pass
+  id_usuario			  pais
+				  avatar
+ 
+categorias			videos_articulos
+  id_categoria PRIMARY KEY	  id_video PRIMARY KEY
+  categoria			  video
+				  id_articulo
